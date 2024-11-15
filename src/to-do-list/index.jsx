@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import Display from "./display";
 
 export default function ToDoList() {
     const testTaskList = [{title:'title', description:'description'}];
@@ -15,6 +16,7 @@ export default function ToDoList() {
             setTaskList([
                 ...taskList,
                 {
+                    key: Symbol(),
                     title: titleRef.current.value,
                     description: descRef.current.value,
                     finished: false,
@@ -23,10 +25,6 @@ export default function ToDoList() {
             titleRef.current.value = '';
             descRef.current.value = '';
         }
-
-    }
-
-    function markTaskAsComplete() {
 
     }
 
@@ -58,27 +56,7 @@ export default function ToDoList() {
 
             </form>
             
-            <div >
-                <h2>Current Task List</h2>
-                <ul>
-                    {taskList.map((task, idx) => (
-                        <li key={idx}>
-                            {task.title} 
-                            <br/>
-                            {task.description}
-                        </li>
-                    ))}
-                </ul>
-                {/* {taskList.length ?
-                    <ul>
-                    {taskList.map((task, idx) => {
-                        return <li key={idx}>{task.title} <br/> {task.description}</li>;
-                    })}
-                    </ul>
-                    : <p>There currently do not have tasks, fill the form above to add one!</p>
-                } */}
-
-            </div>
+            <Display taskList={taskList} setTaskList={setTaskList} />
         </div>
     );
 }
