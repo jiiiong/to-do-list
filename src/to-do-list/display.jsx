@@ -47,7 +47,7 @@ export default function Display({ taskList, setTaskList }) {
     <div className="w-80 border-solid border-gray-400 border-1 py-2 px-4">
       <h2>Current Task List</h2>
       <span className="mr-2">
-        <Toggle initState={showAll} onToggle={() => setShowAll(!showAll)}/>
+        <Toggle initState={!showAll} onToggle={() => setShowAll(!showAll)}/>
       </span>
       {showAll ? "Show only uncompleted tasks" : "Show all tasks"}
       <ul className="list-none pl-0 ">
