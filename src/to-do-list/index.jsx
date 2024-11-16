@@ -71,7 +71,7 @@ export default function ToDoList() {
         <button className="align-ri">Add New Task</button>
       </form>
 
-      <Display taskList={taskList ?? []} setTaskList={setTaskList} />
+      <Display taskList={taskList} setTaskList={setTaskList} />
     </div>
   );
 }
