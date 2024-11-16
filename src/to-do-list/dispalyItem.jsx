@@ -18,6 +18,7 @@ export default function DisplayItem({
         <div className="flex">
           <div className="mr-2">
             <Toggle
+              initState={task.finished}
               onToggle={(curFinished) => {
                 onToggle(task.id, curFinished);
               }}

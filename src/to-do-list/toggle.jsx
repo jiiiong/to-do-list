@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export default function Toggle({onToggle}) {
-    const [finished, setFinished] = useState(false);
+export default function Toggle({initState, onToggle}) {
+    const [finished, setFinished] = useState(initState);
 
     return (
         <span 
