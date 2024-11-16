@@ -54,12 +54,13 @@ export default function ToDoList() {
           addNewTask();
         }}
         className="
-                    w-64
-                    border-solid border-gray-300 border-1
+                    w-80
+                    border-solid border-gray-400 border-1
                     py-2 px-4
                     [&_p]:flex
                     [&_p]:justify-between"
       >
+      <h2>Add New Task</h2>
         <p>
           <label htmlFor="title">title: </label>
           <input type="text" id="title" required ref={titleRef}></input>
@@ -68,7 +69,7 @@ export default function ToDoList() {
           <label htmlFor="description">description: </label>
           <input type="text" id="description" required ref={descRef}></input>
         </p>
-        <button className="align-ri">Add New Task</button>
+        <button className="align-ri">submit</button>
       </form>
 
       <Display taskList={taskList} setTaskList={setTaskList} />

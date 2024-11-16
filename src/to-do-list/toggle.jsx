@@ -4,7 +4,7 @@ export default function Toggle({onToggle}) {
     const [finished, setFinished] = useState(false);
 
     return (
-        <button 
+        <span 
             onClick={() => {
                 setFinished(!finished);
                 onToggle(!finished);
@@ -12,6 +12,6 @@ export default function Toggle({onToggle}) {
             className="select-none"
         >
         {finished ? '✅' : '⬜'}
-        </button>
+        </span>
     );
 }

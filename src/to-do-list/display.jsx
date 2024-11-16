@@ -42,9 +42,9 @@ export default function Display({ taskList, setTaskList }) {
   const [editingTaskId, setEditingTaskId] = useState(null);
   
   return (
-    <div>
+    <div className="w-80 border-solid border-gray-400 border-1 py-2 px-4">
       <h2>Current Task List</h2>
-      <ul className="list-none pl-0 w-64">
+      <ul className="list-none pl-0 ">
         {taskList.map((task) => (
           <li key={task.id}>
             <DisplayItem 
